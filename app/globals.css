@@ -25,10 +25,18 @@ body {
   font-style: normal;
 }
 
-.bg-custom{
-  background-image: url('../public/assets/hero-bg.svg')
+/* Font Family biliner */
+@font-face {
+  font-family: "Biliner Meclan";
+  src: url("/fonts/biliner/Biliner Meclan.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.bg-custom-two{
-  background-image: url('../public/assets/hero-bg-two.svg')
+.bg-custom {
+  background-image: url("../public/assets/hero-bg.svg");
+}
+
+.bg-custom-two {
+  background-image: url("../public/assets/hero-bg-two.svg");
 }

@@ -36,7 +36,12 @@ export default function Evolution() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#020817] text-white px-4 md:px-8 md:py-[90px] py-[60px]">
+    <div className="min-h-screen text-white px-4 md:px-8 md:py-[90px] py-[60px] relative">
+      <img
+        src="/assets/blue-shade.png"
+        alt=""
+        className="absolute top-[50px] left-0 transform -translate-x-1/2 -translate-y-1/2"
+      />
       <div className="max-w-[1280px] mx-auto">
         {/* Hero Section */}
         <h1
