@@ -8,9 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        "general-sans": ['"GeneralSans-Regular"', "sans-serif"],
+        'helvetica-bold': ['"Helvetica-Bold"', 'sans-serif'],
+      },
+      boxShadow: {
+        'custom': '0px 4px 25px 0px rgba(0, 0, 0, 0.2)',
       },
     },
   },
