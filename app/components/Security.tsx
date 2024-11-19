@@ -4,55 +4,62 @@ import Link from "next/link";
 type Certification = {
   image: string;
   alt: string;
-  title: string;
-  subtitle?: string; // Subtitle is optional
+  title?: string;
 };
 
 export default function Security() {
   const certifications: Certification[] = [
     {
-      image: "/placeholder.svg?height=120&width=120",
+      image: "/assets/gdpr-security.png",
       alt: "GDPR Certification",
-      title: "Committed To The General Data",
-      subtitle: "Protection Regulation",
+      title: "Committed To The General Data Protection Regulation",
     },
     {
-      image: "/placeholder.svg?height=120&width=120",
+      image: "/assets/cai-security.png",
       alt: "Content Authenticity Initiative",
-      title: "Content",
-      subtitle: "Authenticity Initiative",
     },
     {
-      image: "/placeholder.svg?height=120&width=120",
+      image: "/assets/soc2-security.png",
       alt: "AICPA SOC",
       title: "SOC 2 Type 2 Compliant",
     },
     {
-      image: "/placeholder.svg?height=120&width=120",
+      image: "/assets/c2pa-security.png",
       alt: "C2PA Certification",
-      title: "Coalition For Content Provenance",
-      subtitle: "And Authenticity (C2PA)",
+      title: "Coalition For Content Provenance And Authenticity (C2PA)",
     },
   ];
 
   return (
-    <section className="min-h-screen bg-black text-white px-4 py-16 flex flex-col items-center justify-center text-center">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-8">
+    <section className="min-h-screen bg-black text-white px-4 py-16 flex flex-col items-center justify-center text-center relative">
+      <img
+        src="/assets/egg-shape-blue-shade.png"
+        alt=""
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      />
+      <div className="max-w-[1280px] mx-auto">
+        <h1 className="text-4xl md:text-[66px] font-helvetica-bold md:leading-[77px] mb-[30px] md:mb-[45px]">
           Safe, Reliable, And Ethical Use Of NUIIX
         </h1>
 
-        <p className="text-lg md:text-xl mb-16 max-w-3xl mx-auto opacity-90">
+        <p className="md:text-[18px] font-[400] mb-[75px] max-w-[882.47px] mx-auto font-general-sans">
           We Prioritize The Security And Responsible Use Of Our Platform. AI
           Avatars Are Created And Shared Only With Explicit Permission, And Our
           System Is Designed To Prevent The Distribution Of Harmful Or
           Inappropriate Content.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[100px] md:gap-[130px] mb-16">
           {certifications.map((cert, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <div className="mb-4 relative w-24 h-24">
+            <div
+              key={index}
+              className="flex flex-col items-center h-[235.64px]"
+            >
+              <div
+                className={`relative w-full ${
+                  index === 2 ? "h-[154px]" : "h-full"
+                }`}
+              >
                 <Image
                   src={cert.image}
                   alt={cert.alt}
@@ -60,21 +67,30 @@ export default function Security() {
                   className="object-contain"
                 />
               </div>
-              <div className="text-sm">
-                <p className="font-medium">{cert.title}</p>
-                {cert.subtitle && <p className="opacity-80">{cert.subtitle}</p>}
-              </div>
+              {cert.title && (
+                <p className="opacity-[0.5] text-[15.21px] font-[400] font-general-sans mt-[26px]">
+                  {cert.title}
+                </p>
+              )}
             </div>
           ))}
         </div>
 
-        <Link
-          href="#"
-          className="inline-block px-8 py-3 text-lg font-medium rounded-full bg-blue-500 hover:bg-blue-600 transition-colors duration-200 relative group"
-        >
-          <span className="relative z-10">Learn More</span>
-          <div className="absolute inset-0 rounded-full bg-blue-500 blur-md opacity-50 group-hover:opacity-75 transition-opacity duration-200"></div>
-        </Link>
+        <button className="bg-[#3A8FFF33] p-2 rounded-full relative w-[172.06px] h-[73px] flex justify-center items-center overflow-hidden mx-auto text-white">
+          <span
+            className="bg-[#3A8FFF] w-[156.82px] flex items-center justify-center py-4 px-5 rounded-full relative h-[58px]"
+            style={{
+              border: "1.55px solid transparent",
+              borderImageSource:
+                "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)",
+              transition: "border-image-source 0.4s ease-in-out",
+            }}
+          >
+            <span className="ml-1 text-[18px] font-[300] font-general-sans w-max">
+              Learn More
+            </span>
+          </span>
+        </button>
       </div>
     </section>
   );
