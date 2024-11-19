@@ -36,7 +36,7 @@ export default function Evolution() {
   ];
 
   return (
-    <div className="min-h-screen text-white px-4 md:px-8 md:py-[90px] py-[60px] relative">
+    <div className="min-h-screen text-white px-4 md:px-8 py-[50px] md:py-[70px] relative">
       <img
         src="/assets/blue-shade.png"
         alt=""
@@ -74,7 +74,7 @@ export default function Evolution() {
                   <img
                     src={item.imgSrc}
                     alt={item.title}
-                    className={`${isMobile && "w-[60vw]"} ${
+                    className={`${isMobile && "w-[45vw]"} ${
                       index === 0 && "md:ms-0 ms-[27px]"
                     }`}
                   />
@@ -92,7 +92,7 @@ export default function Evolution() {
                     />
                   )}
                 </div>
-                <h2 className="text-[40px] md:text-[46px] font-[500] text-center mt-[20px] md:mt-[38px]">
+                <h2 className="text-[34px] sm:text-[40px] md:text-[46px] font-[500] text-center mt-[15px] sm:mt-[20px] md:mt-[38px] font-general-sans">
                   {item.title}
                 </h2>
               </div>
@@ -101,9 +101,9 @@ export default function Evolution() {
         </div>
 
         {/* Call to Action Section */}
-        <div className="flex md:flex-row flex-col items-start md:items-center justify-between md:gap-[55px] gap-6 mt-[108px] w-full">
+        <div className="flex md:flex-row flex-col items-start md:items-center justify-between md:gap-[55px] gap-6 md:mt-[108px] mt-[60px] w-full">
           <h2
-            className="text-[32px] sm:text-[38px] md:text-[48px] font-[700] transition-all duration-700 opacity-0 translate-y-10 helvetica-bold"
+            className="text-[32px] sm:text-[38px] md:text-[48px] md:leading-[60px] sm:leading-[45px] leading-[40px] font-[700] transition-all duration-700 opacity-0 translate-y-10 helvetica-bold"
             style={{
               opacity: isVisible ? 1 : 0,
               transform: isVisible ? "translateY(0)" : "translateY(40px)",

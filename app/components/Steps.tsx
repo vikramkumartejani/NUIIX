@@ -45,7 +45,7 @@ const steps: Step[] = [
 
 export default function Steps(): JSX.Element {
   return (
-    <div className="min-h-screen text-white px-4 py-[80px] md:py-[120px] relative">
+    <div className="min-h-screen text-white px-4 py-[50px] md:py-[70px] relative">
       <img
         src="/assets/blue-shade.png"
         alt=""

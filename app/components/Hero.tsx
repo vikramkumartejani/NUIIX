@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <main className="min-h-screen w-full flex flex-col items-center text-center px-4 py-[102px] relative">
+    <main className="min-h-screen w-full flex flex-col items-center text-center px-4 pt-[102px] relative">
       <div className="max-w-[1280px] mx-auto relative z-[3]">
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[76px] font-[700] text-white mb-[38px] leading-[50px] md:leading-[75px] lg:leading-[92px] xl:leading-[100px] font-helvetica-bold">
           Step Into The Future Meet
@@ -45,6 +45,7 @@ export default function Hero() {
             alt="hero-img"
             width={585.69}
             height={585.69}
+            className="md:w-auto w-[350px]"
           />
         </div>
       </div>
