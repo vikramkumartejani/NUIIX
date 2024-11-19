@@ -49,31 +49,37 @@ export default function Security() {
           Inappropriate Content.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[100px] md:gap-[130px] mb-16">
-          {certifications.map((cert, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center h-[235.64px]"
-            >
+        <div className="relative mb-16">
+          {/* Gradient overlay for fading effect */}
+          <div className="sm:block hidden absolute top-0 left-0 w-[137.52px] h-full bg-gradient-to-r from-[#020407] to-[#02040700] pointer-events-none z-10"></div>
+          <div className="sm:block hidden absolute top-0 right-0 w-[137.52px] h-full bg-gradient-to-l from-[#020407] to-[#02040700] pointer-events-none z-10"></div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[100px] md:gap-[130px]">
+            {certifications.map((cert, index) => (
               <div
-                className={`relative w-full ${
-                  index === 2 ? "h-[154px]" : "h-full"
-                }`}
+                key={index}
+                className="flex flex-col items-center h-[235.64px]"
               >
-                <Image
-                  src={cert.image}
-                  alt={cert.alt}
-                  fill
-                  className="object-contain"
-                />
+                <div
+                  className={`relative w-full ${
+                    index === 2 ? "h-[154px]" : "h-full"
+                  }`}
+                >
+                  <Image
+                    src={cert.image}
+                    alt={cert.alt}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                {cert.title && (
+                  <p className="opacity-[0.5] text-[15.21px] font-[400] font-general-sans mt-[26px]">
+                    {cert.title}
+                  </p>
+                )}
               </div>
-              {cert.title && (
-                <p className="opacity-[0.5] text-[15.21px] font-[400] font-general-sans mt-[26px]">
-                  {cert.title}
-                </p>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <button className="bg-[#3A8FFF33] p-2 rounded-full relative w-[172.06px] h-[73px] flex justify-center items-center overflow-hidden mx-auto text-white">
