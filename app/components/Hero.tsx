@@ -41,7 +41,7 @@ export default function Hero() {
         </button>
         <div className="flex justify-center mt-[58.49px]">
           <Image
-            src="/assets/hero-img.png"
+            src="/assets/hero-img.svg"
             alt="hero-img"
             width={585.69}
             height={585.69}

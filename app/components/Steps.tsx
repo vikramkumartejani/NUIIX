@@ -53,7 +53,7 @@ export default function Steps(): JSX.Element {
       />
       <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
-        <h1 className="text-[40px] sm:text-[50px] md:text-[66px] font-[700] text-center mb-[88px] md:leading-[77px] helvetica-bold max-w-[898.47px] mx-auto">
+        <h1 className="text-[40px] sm:text-[50px] md:text-[66px] font-[700] text-center mb-[88px] md:leading-[77px] sm:leading-[65px] leading-[52px] helvetica-bold max-w-[898.47px] mx-auto">
           Create Your Own Avatar Or Digital Twin In 4 Easy Steps.
         </h1>
 
@@ -78,10 +78,10 @@ export default function Steps(): JSX.Element {
                         : "w-[26.64px] h-[26.64px] min-w-[26.64px] min-h-[26.64px] bg-[#4F5164]"
                     } rounded-full mt-[38px] mb-[42px] md:block hidden`}
                   ></div>
-                  <h3 className="text-[22px] md:text-[26px] text-[#FFFFFFCC] font-[400] font-biliner-meclan mb-[24px] md:mt-0 mt-5">
+                  <h3 className="text-[22px] md:text-[26px] text-[#FFFFFFCC] font-[400] font-biliner-meclan md:mb-[24px] mb-[5px] md:mt-0 sm:mt-5 mt-4">
                     Step {step.number}
                   </h3>
-                  <h4 className="text-[30px] md:text-[33px] font-[700] mb-[18px] helvetica-bold md:leading-[40px]">
+                  <h4 className="text-[30px] md:text-[33px] font-[700] md:mb-[18px] mb-[14px] helvetica-bold md:leading-[40px] leading-[35px]">
                     {step.title}
                   </h4>
                   <p className="text-white font-general-sans px-1 text-[16px] font-[300]">
