@@ -1,4 +1,5 @@
 import AIAssistant from "./components/AIAssistant";
+import ElevenLabs from "./components/ElevenLabs";
 import Evolution from "./components/Evolution";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -14,6 +15,7 @@ export default function Home() {
       {/* <Header /> */}
       <Hero />
       <Partners />
+      <ElevenLabs />
       <HumanPotential />
       <AIAssistant />
       <Steps />
