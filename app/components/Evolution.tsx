@@ -36,7 +36,7 @@ export default function Evolution() {
   ];
 
   return (
-    <div className="min-h-screen text-white px-4 md:px-8 py-[50px] md:py-[70px] relative">
+    <section className="min-h-screen text-white px-4 md:px-8 py-[50px] md:py-[70px] relative">
       <img
         src="/assets/blue-shade.png"
         alt=""
@@ -136,6 +136,6 @@ export default function Evolution() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

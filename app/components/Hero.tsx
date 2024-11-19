@@ -39,7 +39,7 @@ export default function Hero() {
             </span>
           </span>
         </button>
-        <div className="flex justify-center mt-[58.49px]">
+        <div className="flex justify-center mt-[58.49px] mb-[-1px]">
           <Image
             src="/assets/hero-img.svg"
             alt="hero-img"

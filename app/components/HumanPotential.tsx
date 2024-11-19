@@ -42,7 +42,7 @@ const HumanPotential = () => {
     setOpenSection(openSection === id ? null : id);
   };
   return (
-    <div className="min-h-screen px-4 md:px-[25px] py-[40px] md:py-[70px]">
+    <section className="min-h-screen px-4 md:px-[25px] py-[40px] md:py-[70px]">
       <div className="min-h-screen w-full bg-white sm:rounded-[70px] rounded-[50px] px-4 md:px-[35px] lg:px-[67px] py-[50px] md:py-[75px] relative overflow-hidden">
         <img
           src="/assets/blue-shade.png"
@@ -172,7 +172,7 @@ const HumanPotential = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

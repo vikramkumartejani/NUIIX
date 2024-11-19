@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AIAssistant() {
   return (
-    <main className="xl:min-h-[726px] lg:min-h-[790px] sm:min-h-[535px] min-h-[680px] sm:h-full h-[680px] text-white relative overflow-hidden py-[40px] md:py-[70px]">
+    <section className="xl:min-h-[726px] lg:min-h-[790px] sm:min-h-[535px] min-h-[680px] sm:h-full h-[680px] text-white relative overflow-hidden py-[40px] md:py-[70px]">
       <div className="max-w-[1280px] h-full mx-auto relative z-[1]">
         <img
           src="/assets/ai-assistant-bg.png"
@@ -51,6 +51,6 @@ export default function AIAssistant() {
           className="absolute left-1/2 md:bottom-[-1px] bottom-0 transform -translate-x-1/2 lg:z-[2] z-[1] lg:w-auto sm:w-[400px] w-[300px]"
         />
       </div>
-    </main>
+    </section>
   );
 }
