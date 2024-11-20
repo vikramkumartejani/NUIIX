@@ -41,8 +41,10 @@ export default function ElevenLabs() {
         {/* Voice Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <div className="rounded-[30px] text-white sm:col-span-2 bg-[#1A1A1A] px-4 md:px-[42px] py-6 md:py-[46px] w-full">
-            <h1 className="mb-4 text-5xl font-bold">IIElevenLabs</h1>
-            <p className="mb-8 text-xl text-gray-300">
+            <h1 className="mb-[16px] md:mb-[26px] text-[35px] md:text-[48px] font-[700] font-helvetica-bold">
+              IIElevenLabs
+            </h1>
+            <p className="mb-[16px] md:mb-[28px] md:text-[18px] font-general-sans text-[#FFFFFF99]">
               Create Voices & Accents, Clone Your Own Voice And{" "}
               <span className="text-white">
                 Import Up To 1000+ Pre-Built Lifelike Voices
@@ -50,10 +52,10 @@ export default function ElevenLabs() {
               Right Into Your NUIIX Account With Our ElevenLabs 1 Click
               Integrations.
             </p>
-            <button className="bg-[#3A8FFF33] p-2 rounded-full relative w-[305.84px] h-[73px] flex justify-center items-center overflow-hidden text-white">
+            <button className="bg-[#3A8FFF33] p-2 rounded-full relative sm:w-[305.84px] w-[255px] h-[73px] flex justify-center items-center overflow-hidden text-white">
               <div className="btn-border w-full p-[1.55px]">
                 <span
-                  className="bg-[#3A8FFF] w-[283.76px] flex items-center justify-center py-4 px-5 rounded-full relative h-[58px]"
+                  className="bg-[#3A8FFF] sm:w-[283.76px] w-[233px] flex items-center justify-center py-4 sm:px-5 px-3 rounded-full relative h-[58px]"
                   style={{
                     border: "1.55px solid transparent",
                     borderImageSource:
@@ -61,13 +63,13 @@ export default function ElevenLabs() {
                     transition: "border-image-source 0.4s ease-in-out",
                   }}
                 >
-                  <span className="ml-1 text-[18px] font-[300] font-general-sans w-max">
+                  <span className="ml-1 text-[15px] sm:text-[18px] font-[300] font-general-sans w-max">
                     Try A Free Test Conversation
                   </span>
                 </span>
               </div>
             </button>
-            <p className="mt-8 text-gray-300">
+            <p className="mt-[16px] md:mt-[24px] md:text-[18px] font-general-sans text-[#FFFFFF99]">
               Or Play The Audios Below To Preview Some Of The Voices:
             </p>
           </div>
@@ -140,9 +142,9 @@ export default function ElevenLabs() {
           ))}
 
           {/* More Voices Card */}
-          <div className="flex aspect-square flex-col items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 to-blue-600 p-8 text-center text-white h-full w-full">
-            <BiPlus className="mb-4 h-12 w-12" />
-            <p className="text-2xl font-semibold">
+          <div className="flex flex-col items-center justify-center rounded-[30px] bg-gradient-to-br from-blue-500 to-blue-600 p-8 sm:p-[40px] text-center text-white h-full w-full">
+            <BiPlus className="mb-[20px] md:mb-[23px] text-[60px]" />
+            <p className="md:text-[18px] font-[500] font-general-sans">
               More Than 1000 Lifelike Voices In 29 Languages And All Diverse
               Accents
             </p>
