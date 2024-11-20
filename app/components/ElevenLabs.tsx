@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { BiChevronDown, BiPlus } from "react-icons/bi";
 import { BsPlay } from "react-icons/bs";
+import { FaPlay } from "react-icons/fa";
 
 export default function ElevenLabs() {
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
@@ -10,28 +11,23 @@ export default function ElevenLabs() {
   const voices = [
     {
       id: 1,
-      image: "/placeholder.svg?height=400&width=400",
-      bgColor: "bg-pink-200",
+      image: "/assets/voice-1.png",
     },
     {
       id: 2,
-      image: "/placeholder.svg?height=400&width=400",
-      bgColor: "bg-purple-200",
+      image: "/assets/voice-2.png",
     },
     {
       id: 3,
-      image: "/placeholder.svg?height=400&width=400",
-      bgColor: "bg-orange-200",
+      image: "/assets/voice-3.png",
     },
     {
       id: 4,
-      image: "/placeholder.svg?height=400&width=400",
-      bgColor: "bg-blue-200",
+      image: "/assets/voice-4.png",
     },
     {
       id: 5,
-      image: "/placeholder.svg?height=400&width=400",
-      bgColor: "bg-pink-200",
+      image: "/assets/voice-5.png",
     },
   ];
 
@@ -44,7 +40,7 @@ export default function ElevenLabs() {
       <div className="max-w-[1280px] mx-auto">
         {/* Voice Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          <div className="rounded-[30px] text-white sm:col-span-2 bg-[#1A1A1A] px-[42px] py-[46px]">
+          <div className="rounded-[30px] text-white sm:col-span-2 bg-[#1A1A1A] px-4 md:px-[42px] py-6 md:py-[46px] w-full">
             <h1 className="mb-4 text-5xl font-bold">IIElevenLabs</h1>
             <p className="mb-8 text-xl text-gray-300">
               Create Voices & Accents, Clone Your Own Voice And{" "}
@@ -78,65 +74,67 @@ export default function ElevenLabs() {
           {voices.map((voice) => (
             <div
               key={voice.id}
-              className={`relative overflow-hidden rounded-[30px] ${voice.bgColor} p-4`}
+              className="relative rounded-[30px] md:max-h-auto max-h-[400px] w-full md:mx-0 mx-auto"
             >
-              <div className="aspect-square">
-                <img
-                  src={voice.image}
-                  alt="Voice preview"
-                  className="h-full w-full object-cover"
-                />
-                <button className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/20 p-6 backdrop-blur-sm transition-transform hover:scale-110">
-                  <BsPlay className="h-8 w-8 text-white" />
-                </button>
-              </div>
-              <div className="relative mt-4">
-                <button
-                  onClick={() => toggleDropdown(voice.id)}
-                  className="flex w-full items-center justify-between rounded-full bg-black px-4 py-2 text-white"
-                >
-                  <div className="flex items-center gap-2">
-                    <img
-                      src="/placeholder.svg?height=20&width=20"
-                      alt="UK flag"
-                      className="h-5 w-5 rounded-full"
-                    />
-                    <span>English</span>
+              <img
+                src={voice.image}
+                alt="Voice preview"
+                className="h-full w-full object-cover bg-top z-[1] rounded-[30px]"
+              />
+              <button className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#3A8FFF80] w-[63.13px] h-[63.13px] backdrop-blur-sm transition-transform hover:scale-110 flex items-center justify-center">
+                <FaPlay className="text-[23px] text-white" />
+              </button>
+              <div className="px-[22px]">
+                <div className="relative z-[3]">
+                  <div className="relative">
+                    <button
+                      onClick={() => toggleDropdown(voice.id)}
+                      className="absolute bottom-[16.55px] left-0 flex w-full items-center justify-between rounded-[20px] bg-black px-[17.39px] py-[9.81px] text-white"
+                    >
+                      <div className="flex items-center gap-2">
+                        <img
+                          src="/assets/en.png"
+                          alt="UK flag"
+                          className="h-[35.92px] w-[35.92px] rounded-full"
+                        />
+                        <span>English</span>
+                      </div>
+                      <BiChevronDown
+                        className={`h-5 w-5 transition-transform ${
+                          openDropdown === voice.id ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {openDropdown === voice.id && (
+                      <div className="absolute left-0 right-0 top-full z-10 mt-[-13px] rounded-xl bg-black py-2">
+                        <button className="flex w-full items-center gap-2 px-4 py-2 text-white hover:bg-white/10">
+                          <img
+                            src="/assets/en.png"
+                            alt="UK flag"
+                            className="h-5 w-5 rounded-full"
+                          />
+                          English
+                        </button>
+                        <button className="flex w-full items-center gap-2 px-4 py-2 text-white hover:bg-white/10">
+                          <img
+                            src="/assets/en.png"
+                            alt="Spain flag"
+                            className="h-5 w-5 rounded-full"
+                          />
+                          Spanish
+                        </button>
+                        <button className="flex w-full items-center gap-2 px-4 py-2 text-white hover:bg-white/10">
+                          <img
+                            src="/assets/en.png"
+                            alt="France flag"
+                            className="h-5 w-5 rounded-full"
+                          />
+                          French
+                        </button>
+                      </div>
+                    )}
                   </div>
-                  <BiChevronDown
-                    className={`h-5 w-5 transition-transform ${
-                      openDropdown === voice.id ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                {openDropdown === voice.id && (
-                  <div className="absolute left-0 right-0 top-full z-10 mt-2 rounded-xl bg-black py-2">
-                    <button className="flex w-full items-center gap-2 px-4 py-2 text-white hover:bg-white/10">
-                      <img
-                        src="/placeholder.svg?height=20&width=20"
-                        alt="UK flag"
-                        className="h-5 w-5 rounded-full"
-                      />
-                      English
-                    </button>
-                    <button className="flex w-full items-center gap-2 px-4 py-2 text-white hover:bg-white/10">
-                      <img
-                        src="/placeholder.svg?height=20&width=20"
-                        alt="Spain flag"
-                        className="h-5 w-5 rounded-full"
-                      />
-                      Spanish
-                    </button>
-                    <button className="flex w-full items-center gap-2 px-4 py-2 text-white hover:bg-white/10">
-                      <img
-                        src="/placeholder.svg?height=20&width=20"
-                        alt="France flag"
-                        className="h-5 w-5 rounded-full"
-                      />
-                      French
-                    </button>
-                  </div>
-                )}
+                </div>
               </div>
             </div>
           ))}
