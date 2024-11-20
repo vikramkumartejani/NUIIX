@@ -48,7 +48,7 @@ const FloatingText: React.FC = () => {
             velocity={17} // Bobbing speed
             radius={20} // Height of the bobbing effect
             backgroundColors={backgroundColors} // Transparent background colors
-            initDeg={0} // Random initial rotation angle
+            initDeg={Math.random() * 360} // Random initial rotation angle
             direction={Math.random() > 0.5 ? "clockwise" : "counterclockwise"} // Random direction for bobbing
           >
             <div className="absolute flex gap-1 items-center text-white text-[20px] lg:text-[33.8px] font-bold w-max px-[12px] py-[8px] border border-white shadow-md bg-[#FFFFFF33] backdrop-blur-md rounded-full z-[9]">
