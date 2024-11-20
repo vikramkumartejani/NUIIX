@@ -8,7 +8,7 @@ const VerticalBars: React.FC = () => {
   useEffect(() => {
     // Calculate bar count based on window width after the component mounts
     const calculateBarCount = () => {
-      const newBarCount = Math.floor(window.innerWidth / 10);
+      const newBarCount = Math.floor(window.innerWidth / 12);
       setBarCount(newBarCount);
     };
 
@@ -26,8 +26,8 @@ const VerticalBars: React.FC = () => {
 
     const interval = setInterval(() => {
       // Update bars with random heights every 200ms
-      setBars(Array.from({ length: barCount }, () => Math.random() * 300 + 20));
-    }, 400);
+      setBars(Array.from({ length: barCount }, () => Math.random() * 400 + 20));
+    }, 700);
 
     return () => clearInterval(interval);
   }, [barCount]);
@@ -37,9 +37,8 @@ const VerticalBars: React.FC = () => {
       {bars.map((height, idx) => (
         <div
           key={idx}
-          className="bg-[#58ADFF] rounded-md"
+          className="bg-[#58ADFF] rounded-md w-[4px] md:w-[5px]"
           style={{
-            width: "4px", // Thin bars
             height: `${height}px`, // Dynamic height
             transition: "height 0.7s ease", // Smooth height transition
           }}

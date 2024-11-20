@@ -106,57 +106,7 @@ body {
   }
 }
 
-/* styles/globals.css or your preferred CSS file */
-
-/* Define the bobbing animation */
-@keyframes bobbing {
-  0% {
-    transform: translateY(0); /* Start at normal position */
-  }
-  50% {
-    transform: translateY(-20px); /* Move upwards at 50% of the animation */
-  }
-  100% {
-    transform: translateY(0); /* Return to the initial position */
-  }
-}
-
-/* Define the left-to-right sliding animation */
-@keyframes slide {
-  0% {
-    transform: translateX(-100vw); /* Start off-screen to the left */
-  }
-  100% {
-    transform: translateX(100vw); /* Move off-screen to the right */
-  }
-}
-
-/* Apply the floating text animation */
-.floating-text {
-  position: absolute;
-  animation: bobbing 3s ease-in-out infinite,
-    /* Bobbing up and down */ slide 20s linear infinite; /* Sliding from left to right */
-  opacity: 0.8;
-  will-change: transform; /* Hint to browser that the element is animated */
-}
-
-/* Randomize animation durations for variation */
-.floating-text:nth-child(odd) {
-  animation-duration: 3s, 15s; /* Different speeds for variation */
-}
-
-.floating-text:nth-child(even) {
-  animation-duration: 3s, 18s;
-}
-
-.floating-text:nth-child(3) {
-  animation-duration: 3s, 12s;
-}
-
-.floating-text:nth-child(4) {
-  animation-duration: 3s, 20s;
-}
-
-.floating-text:nth-child(5) {
-  animation-duration: 3s, 25s;
+/* floating languages */
+.wJVBu {
+  overflow: visible !important;
 }

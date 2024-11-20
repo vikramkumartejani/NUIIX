@@ -1,7 +1,7 @@
-// components/FloatingText.tsx
-import React, { useEffect } from "react";
-import gsap from "gsap";
+import React from "react";
+import Marquee, { Motion } from "react-marquee-slider";
 
+// Define your word type for clarity
 type Word = {
   text: string;
   language: string;
@@ -16,44 +16,48 @@ const FloatingText: React.FC = () => {
     { text: "مرحبا", language: "/assets/sa.png" },
   ];
 
-  useEffect(() => {
-    words.forEach((_, idx) => {
-      const element = document.getElementById(`word-${idx}`);
-      if (element) {
-        // Animate the floating text to move left to right (horizontal) and bob (vertical)
-        gsap.to(element, {
-          x: "100vw", // Move to the right edge of the screen (horizontal sliding)
-          y: "20px", // Move up and down (bobbing effect)
-          duration: 10 + Math.random() * 5, // Random duration for smooth sliding and bobbing
-          repeat: -1, // Repeat the animation infinitely
-          yoyo: true, // Bobbing effect: goes up and down continuously
-          ease: "power1.inOut", // Ease for smooth transitions
-        });
-      }
-    });
-  }, []);
+  // Remove backgroundColors completely or set them to transparent
+  const backgroundColors = {
+    earth: "transparent", // Transparent background for earth
+    solarSystem: "transparent", // Transparent background for solarSystem
+    buffer: "transparent", // Transparent background for buffer
+  };
+
+  // Empty callback functions for onInit and onFinish
+  const handleInit = () => {
+    console.log("Marquee animation initialized");
+  };
+
+  const handleFinish = () => {
+    console.log("Marquee animation finished");
+  };
 
   return (
-    <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-      {words.map((word, idx) => {
-        // Randomize initial position for each word
-        const x = Math.random() * 100; // Random starting horizontal position
-        const y = Math.random() * 80; // Random starting vertical position
-        return (
-          <div
+    <div className="absolute top-0 left-0 w-full h-full z-[9]">
+      <Marquee
+        velocity={40} // Speed of the marquee
+        direction="ltr" // Direction of the scrolling
+        scatterRandomly={true} // Random scattering of the text
+        resetAfterTries={200} // Reset after a certain number of tries
+        onInit={handleInit} // onInit callback
+        onFinish={handleFinish} // onFinish callback
+      >
+        {words.map((word, idx) => (
+          <Motion
             key={idx}
-            id={`word-${idx}`}
-            className="floating-text relative flex gap-1 items-center absolute text-white text-[20px] lg:text-[33.8px] font-bold w-max px-[12px] py-[8px] border border-white shadow-md backdrop-blur-lg bg-[#FFFFFF33] rounded-full z-[9]"
-            style={{
-              left: `${x}vw`, // Set random left position
-              top: `${y}vh`, // Set random top position
-            }}
+            velocity={17} // Bobbing speed
+            radius={20} // Height of the bobbing effect
+            backgroundColors={backgroundColors} // Transparent background colors
+            initDeg={0} // Random initial rotation angle
+            direction={Math.random() > 0.5 ? "clockwise" : "counterclockwise"} // Random direction for bobbing
           >
-            <img src={word.language} alt="" />
-            {word.text}
-          </div>
-        );
-      })}
+            <div className="absolute flex gap-1 items-center text-white text-[20px] lg:text-[33.8px] font-bold w-max px-[12px] py-[8px] border border-white shadow-md bg-[#FFFFFF33] backdrop-blur-md rounded-full z-[9]">
+              <img src={word.language} alt={word.text} />
+              {word.text}
+            </div>
+          </Motion>
+        ))}
+      </Marquee>
     </div>
   );
 };
