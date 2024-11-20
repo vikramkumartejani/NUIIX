@@ -54,8 +54,22 @@ export default function ElevenLabs() {
               Right Into Your NUIIX Account With Our ElevenLabs 1 Click
               Integrations.
             </p>
-            <button className="rounded-full bg-blue-500 px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-blue-600">
-              Try A Free Test Conversation
+            <button className="bg-[#3A8FFF33] p-2 rounded-full relative w-[305.84px] h-[73px] flex justify-center items-center overflow-hidden text-white">
+              <div className="btn-border w-full p-[1.55px]">
+                <span
+                  className="bg-[#3A8FFF] w-[283.76px] flex items-center justify-center py-4 px-5 rounded-full relative h-[58px]"
+                  style={{
+                    border: "1.55px solid transparent",
+                    borderImageSource:
+                      "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)",
+                    transition: "border-image-source 0.4s ease-in-out",
+                  }}
+                >
+                  <span className="ml-1 text-[18px] font-[300] font-general-sans w-max">
+                    Try A Free Test Conversation
+                  </span>
+                </span>
+              </div>
             </button>
             <p className="mt-8 text-gray-300">
               Or Play The Audios Below To Preview Some Of The Voices:

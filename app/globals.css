@@ -40,3 +40,289 @@ body {
 .bg-custom-two {
   background-image: url("../public/assets/hero-bg-two.svg");
 }
+
+/* Animated border */
+.card-border {
+  position: relative;
+  width: 100%;
+  border-radius: 13.34px;
+  isolation: isolate;
+  background-color: #1f2835cc;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-border::before,
+.card-border::after {
+  content: "";
+  position: absolute;
+}
+
+.card-border::before {
+  content: ""; /* Create content for the pseudo-element */
+  position: absolute;
+  width: 100%;
+  height: 180%;
+  background: linear-gradient(
+    86deg,
+    rgba(56, 220, 200, 0) 13.7%,
+    rgba(56, 220, 200, 0.4) 27.55%,
+    #02695d 36.4%,
+    #38dcc8 53.88%,
+    rgba(56, 220, 200, 0) 89.18%
+  );
+  z-index: -2; /* Ensure it's behind the card-border content */
+  animation: border 8s linear infinite; /* Optional gradient animation */
+}
+
+@keyframes border {
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+
+.card-border::after {
+  background-color: #1f2835;
+  inset: 2px;
+  border-radius: 13.34px;
+}
+
+/* Animated border */
+.card-border-wide {
+  position: relative;
+  width: 100%;
+  border-radius: 13.34px;
+  isolation: isolate;
+  background-color: #1f2835cc;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-border-wide::before,
+.card-border-wide::after {
+  content: "";
+  position: absolute;
+}
+
+.card-border-wide::before {
+  content: "";
+  position: absolute;
+  width: 180%;
+  height: 130%;
+  background: linear-gradient(
+    0deg,
+    rgba(56, 220, 200, 0) 13.7%,
+    rgba(56, 220, 200, 0.4) 27.55%,
+    #02695d 36.4%,
+    #38dcc8 53.88%,
+    rgba(56, 220, 200, 0) 89.18%
+  );
+  z-index: -2;
+  animation: border-wide 8s linear infinite;
+}
+
+@keyframes border-wide {
+  0% {
+    transform: rotateZ(0deg);
+    animation-timing-function: ease-in; /* Speed up at the start */
+  }
+  10% {
+    transform: rotateZ(-36deg); /* Faster rotation in the first 10% */
+    animation-timing-function: linear; /* Maintain normal speed afterward */
+  }
+  90% {
+    transform: rotateZ(-324deg); /* Normal speed between 10% and 90% */
+    animation-timing-function: ease-out; /* Start speeding up at the end */
+  }
+  100% {
+    transform: rotateZ(-360deg); /* Complete rotation, speed up */
+  }
+}
+
+.card-border-wide::after {
+  background-color: #1f2835;
+  inset: 2px;
+  border-radius: 13.34px;
+}
+
+/* Animated border2 */
+.card-border2 {
+  position: relative;
+  width: 100%;
+  border-radius: 13.34px;
+  isolation: isolate;
+  background-color: #1f2835cc;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-border2::before,
+.card-border2::after {
+  content: "";
+  position: absolute;
+}
+
+.card-border2::before {
+  content: ""; /* Create content for the pseudo-element */
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(122, 165, 0, 0) 13.7%,
+    rgba(122, 165, 0, 0.4) 27.55%,
+    #7aa500 36.4%,
+    #bafc00 53.88%,
+    rgba(186, 252, 0, 0) 89.18%
+  );
+  z-index: -2; /* Ensure it's behind the card-border2 content */
+  animation: border-orange 8s linear infinite; /* Optional gradient animation */
+}
+
+@keyframes border-orange {
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+
+.card-border2::after {
+  background-color: #1f2835;
+  inset: 2px;
+  border-radius: 13.34px;
+}
+
+/* Animated border */
+.card-border-faq {
+  position: relative;
+  width: 100%;
+  border-radius: 13.34px;
+  isolation: isolate;
+  background-color: #1f2835cc;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-border-faq::before,
+.card-border-faq::after {
+  content: "";
+  position: absolute;
+}
+
+.card-border-faq::before {
+  content: ""; /* Create content for the pseudo-element */
+  position: absolute;
+  width: 150%;
+  height: 130%;
+  background: linear-gradient(
+    0deg,
+    rgba(56, 220, 200, 0) 13.7%,
+    rgba(56, 220, 200, 0.4) 27.55%,
+    #02695d 36.4%,
+    #38dcc8 53.88%,
+    rgba(56, 220, 200, 0) 89.18%
+  );
+  z-index: -2; /* Ensure it's behind the card-border-faq content */
+  animation: borderfaq 8s linear infinite; /* Gradient animation */
+}
+
+@keyframes borderfaq {
+  0% {
+    transform: rotateZ(0deg);
+    animation-timing-function: ease-in; /* Speed up at the start */
+  }
+  10% {
+    transform: rotateZ(-36deg); /* First 10% faster */
+    animation-timing-function: ease-out; /* Slow down after */
+  }
+  30% {
+    transform: rotateZ(-180deg); /* Reach halfway */
+    animation-timing-function: ease-in-out; /* Slow, then increase speed for the next 10% */
+  }
+  60% {
+    transform: rotateZ(-216deg); /* Increase speed for this 10% */
+    animation-timing-function: ease-in-out; /* Then slow down */
+  }
+  100% {
+    transform: rotateZ(-360deg); /* Complete the rotation */
+    animation-timing-function: ease-in-out; /* Slow down at the end */
+  }
+}
+
+.card-border-faq::after {
+  background-color: #1f2835;
+  /* inset: 2px; */
+  border-radius: 13.34px;
+}
+
+/* Animated border */
+.btn-border {
+  position: relative;
+  width: 100%;
+  border-radius: 37.1px;
+  isolation: isolate;
+  background-color: #3a8fff;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  overflow: hidden;
+}
+
+.btn-border::before,
+.btn-border::after {
+  content: "";
+  position: absolute;
+}
+.btn-border::before {
+  content: ""; /* Create content for the pseudo-element */
+  position: absolute;
+  top: 4%; /* Vertically center the line */
+  left: 50%; /* Center the rotation point */
+  transform-origin: left center; /* Set rotation origin to the left side of the pseudo-element */
+  width: 100%; /* Full width of the parent container */
+  height: 51px; /* Line thickness */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  z-index: -1; /* Ensure it's behind the btn-border content */
+  animation: btnBorder 8s linear infinite; /* Animate the rotation */
+}
+
+@keyframes btnBorder {
+  0% {
+    transform: rotateZ(0deg); /* Start at 0 degrees */
+  }
+  25% {
+    transform: rotateZ(90deg); /* Move to a quarter rotation */
+  }
+  50% {
+    transform: rotateZ(180deg); /* Halfway rotation */
+  }
+  75% {
+    transform: rotateZ(270deg); /* Three-quarter rotation */
+  }
+  100% {
+    transform: rotateZ(360deg); /* Full rotation */
+  }
+}
+
+.btn-border::after {
+  background-color: #3a8fff;
+  /* inset: 2px; */
+  border-radius: 37.1px;
+}
+
+/* stars orbit animation */
+@keyframes orbit {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}

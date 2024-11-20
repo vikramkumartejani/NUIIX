@@ -83,19 +83,21 @@ export default function Security() {
         </div>
 
         <button className="bg-[#3A8FFF33] p-2 rounded-full relative w-[172.06px] h-[73px] flex justify-center items-center overflow-hidden mx-auto text-white">
-          <span
-            className="bg-[#3A8FFF] w-[156.82px] flex items-center justify-center py-4 px-5 rounded-full relative h-[58px]"
-            style={{
-              border: "1.55px solid transparent",
-              borderImageSource:
-                "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)",
-              transition: "border-image-source 0.4s ease-in-out",
-            }}
-          >
-            <span className="ml-1 text-[18px] font-[300] font-general-sans w-max">
-              Learn More
+          <div className="btn-border w-full p-[1.55px]">
+            <span
+              className="bg-[#3A8FFF] w-[156.82px] flex items-center justify-center py-4 px-5 rounded-full relative h-[58px]"
+              style={{
+                border: "1.55px solid transparent",
+                borderImageSource:
+                  "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)",
+                transition: "border-image-source 0.4s ease-in-out",
+              }}
+            >
+              <span className="ml-1 text-[18px] font-[300] font-general-sans w-max">
+                Learn More
+              </span>
             </span>
-          </span>
+          </div>
         </button>
       </div>
     </section>
