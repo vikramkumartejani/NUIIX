@@ -11,8 +11,8 @@ import Steps from "./components/Steps";
 
 export default function Home() {
   return (
-    <div className="pt-10 bg-[#000000]">
-      {/* <Header /> */}
+    <div className="pt-5 md:pt-10 bg-[#000000]">
+      <Header />
       <Hero />
       <Partners />
       <ElevenLabs />
