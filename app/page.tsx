@@ -1,4 +1,5 @@
 import AIAssistant from "./components/AIAssistant";
+import EffortlessAndNaturalConversation from "./components/EffortlessAndNaturalConversation";
 import ElevenLabs from "./components/ElevenLabs";
 import Evolution from "./components/Evolution";
 import Footer from "./components/Footer";
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Partners />
+      <EffortlessAndNaturalConversation/>
       <LanguagesSpeak />
       <ElevenLabs />
       <HumanPotential />
