@@ -1,6 +1,19 @@
+'use client'
 import Image from "next/image";
+import React, { useState } from "react";
+import StartDemoPopup from "./StartDemoPopup"; // Import the StartDemoPopup component
 
 export default function AIAssistant() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsPopupOpen(true); // Open the popup when button is clicked
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false); // Close the popup when "Accept" button is clicked
+  };
+
   return (
     <section className="xl:min-h-[726px] lg:min-h-[790px] sm:min-h-[535px] min-h-[680px] sm:h-full h-[680px] text-white relative overflow-hidden py-[40px] md:py-[70px]">
       <div className="max-w-[1280px] h-full mx-auto relative z-[1]">
@@ -22,7 +35,10 @@ export default function AIAssistant() {
                 - It's <span className="font-bold">FREE</span>
               </p>
             </div>
-            <button className="bg-[#3A8FFF33] p-2 rounded-full relative w-[208.96px] h-[73px] flex justify-center items-center overflow-hidden">
+            <button
+              className="bg-[#3A8FFF33] p-2 rounded-full relative w-[208.96px] h-[73px] flex justify-center items-center overflow-hidden"
+              onClick={handleButtonClick} // Open the popup when clicked
+            >
               <div className="btn-border w-full p-[1.55px]">
                 <span
                   className="bg-[#3A8FFF] w-[193.87px] flex items-center justify-center py-4 px-5 rounded-full relative h-[58px]"
@@ -53,6 +69,9 @@ export default function AIAssistant() {
           className="absolute left-1/2 md:bottom-[-1px] bottom-0 transform -translate-x-1/2 lg:z-[2] z-[1] lg:w-auto sm:w-[400px] w-[300px]"
         />
       </div>
+
+      {/* Popup will appear when state is true */}
+      {isPopupOpen && <StartDemoPopup onClose={handleClosePopup} />}
     </section>
   );
 }

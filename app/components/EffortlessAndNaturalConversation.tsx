@@ -3,16 +3,19 @@ import React from "react";
 
 const EffortlessAndNaturalConversation = () => {
   return (
-    <div className="text-white pt-[140px] pb-[100px] overflow-x-hidden">
-      <h1 className="text-[66px] capitalize leading-[78px] font-bold font-helvetica-bold text-center max-w-[1136px] mx-auto">
+    <div className="text-white pt-[70px] md:pt-[140px] pb-[50px] md:pb-[100px] overflow-x-hidden">
+      <div className="px-4">
+
+      <h1 className="text-4xl md:text-[66px] capitalize md:leading-[78px] font-bold font-helvetica-bold text-center max-w-[1136px] mx-auto">
         The Power of Connection with Effortless and Natural Conversation
       </h1>
-      <h3 className="text-[18px] leading-[30px] font-normal font-general-sans text-center capitalize mt-10 max-w-[882px] mx-auto">
+      <h3 className="text-base md:text-[18px] md:leading-[30px] font-normal font-general-sans text-center capitalize mt-10 max-w-[882px] mx-auto">
         Welcome to a new world of interaction with emotionally intelligent,
         environmentally aware digital humans. Explore the features that bring a
         NUIIX avatar to life.
       </h3>
 
+      </div>
       {/* Centering the background and image */}
       <div className="flex items-center justify-center w-full relative ">
         {/* Background container */}
@@ -29,22 +32,22 @@ const EffortlessAndNaturalConversation = () => {
           />
 
           {/* Text descriptions with increased contrast and shadow */}
-          <div className="border border-white w-[335px] rounded-[20px] p-4 absolute -top-16 left-0">
+          {/* <div className="border border-white w-[335px] rounded-[20px] p-4 absolute -top-16 left-0">
             <p className="text-[16px] leading-[24px] font-normal font-general-sans">
               Supercharge your NUIIX digital human with the power of the latest
               Large Language Models, enriched with your knowledge, for an
               intelligent, context-aware experience that truly understands what
               you say and how to respond.
             </p>
-          </div>
-          <div className="border border-white w-[335px] rounded-[20px] p-4 absolute top-[236px] left-0">
+          </div> */}
+          {/* <div className="border border-white w-[335px] rounded-[20px] p-4 absolute top-[236px] left-0">
             <p className="text-[16px] leading-[24px] font-normal font-general-sans">
               Bring your digital human to life from a single photo in minutes,
               or select from our exclusive library of ready-made avatars.
             </p>
-          </div>
+          </div> */}
 
-          <div className="">
+          {/* <div className="">
             <div className="border border-white w-[335px] rounded-[20px] p-4 absolute top-[30px] right-0">
               <p className="text-[16px] leading-[24px] font-normal font-general-sans">
                 NUIIX Digital humans see you, sense emotions, and intuitively
@@ -66,13 +69,13 @@ const EffortlessAndNaturalConversation = () => {
                 />
               </svg>
             </div>
-          </div>
+          </div> */}
 
-          <div className="border border-white w-[335px] rounded-[20px] p-4 absolute top-[280px] right-0">
+          {/* <div className="border border-white w-[335px] rounded-[20px] p-4 absolute top-[280px] right-0">
             <p className="text-[16px] leading-[24px] font-normal font-general-sans">
               100 + Voice Library and Eleven Lab Integration.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
 
