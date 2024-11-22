@@ -33,7 +33,7 @@ const Header = () => {
           />
 
           {/* Desktop Menu Links */}
-          <ul className="hidden lg:flex items-center gap-[38px]">
+          <ul className="hidden lg:flex items-center xl:gap-[38px] gap-[2vw]">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
@@ -48,10 +48,10 @@ const Header = () => {
 
           {/* Buttons (Desktop) */}
           <div className="hidden lg:flex items-center gap-[22px]">
-            <button className="bg-[#3A8FFF33] p-2 rounded-full relative w-[223px] h-[73px] flex justify-center items-center overflow-hidden">
+            <button className="bg-[#3A8FFF33] p-2 rounded-full relative xl:w-[223px] w-[193px] h-[73px] flex justify-center items-center overflow-hidden">
               <div className="btn-border w-full p-[1.55px]">
                 <span
-                  className="bg-[#3A8FFF] w-[207px] flex items-center justify-center py-4 px-5 rounded-full relative h-[58px]"
+                  className="bg-[#3A8FFF] xl:w-[207px] w-[177px] flex items-center justify-center md:py-4 py-3 xl:px-5 px-3 rounded-full relative h-[58px]"
                   style={{
                     border: "1.55px solid transparent",
                     borderImageSource:
@@ -64,8 +64,9 @@ const Header = () => {
                     alt="start-to-free"
                     height={22.9}
                     width={24.64}
+                    className="xl:w-[auto] w-[22px]"
                   />
-                  <span className="ml-1 text-[18px] font-normal font-general-sans">
+                  <span className="ml-1 xl:text-[18px] font-normal font-general-sans">
                     Start Free Trial
                   </span>
                 </span>
