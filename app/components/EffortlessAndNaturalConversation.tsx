@@ -3,18 +3,16 @@ import React from "react";
 
 const EffortlessAndNaturalConversation = () => {
   return (
-    <div className="text-white pt-[70px] md:pt-[140px] pb-[50px] md:pb-[100px] overflow-x-hidden">
+    <div className="text-white pt-[70px] md:pt-[140px] px-4 md:px-8 pb-[50px] md:pb-[100px] overflow-x-hidden">
       <div className="px-4">
-
-      <h1 className="text-4xl md:text-[66px] capitalize md:leading-[78px] font-bold font-helvetica-bold text-center max-w-[1136px] mx-auto">
-        The Power of Connection with Effortless and Natural Conversation
-      </h1>
-      <h3 className="text-base md:text-[18px] md:leading-[30px] font-normal font-general-sans text-center capitalize mt-10 max-w-[882px] mx-auto">
-        Welcome to a new world of interaction with emotionally intelligent,
-        environmentally aware digital humans. Explore the features that bring a
-        NUIIX avatar to life.
-      </h3>
-
+        <h1 className="text-4xl md:text-[66px] capitalize md:leading-[78px] font-bold font-helvetica-bold text-center max-w-[1136px] mx-auto">
+          The Power of Connection with Effortless and Natural Conversation
+        </h1>
+        <h3 className="text-base md:text-[18px] md:leading-[30px] font-normal font-general-sans text-center capitalize mt-10 max-w-[882px] mx-auto">
+          Welcome to a new world of interaction with emotionally intelligent,
+          environmentally aware digital humans. Explore the features that bring
+          a NUIIX avatar to life.
+        </h3>
       </div>
       {/* Centering the background and image */}
       <div className="flex items-center justify-center w-full relative ">
@@ -22,60 +20,79 @@ const EffortlessAndNaturalConversation = () => {
         <div className="blue-custom absolute w-[592px] h-[592px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
 
         {/* Image container */}
-        <div className="w-full relative z-10 flex items-center justify-center mt-[120px] h-full max-w-[1370px] mx-auto">
+        <div className="w-full relative z-10 flex items-center justify-center md:mt-[120px] mt-[70px] md:h-full h-[650px] max-w-[1370px] mx-auto">
           <Image
             src="/assets/women-image.svg"
             alt="women"
             width={500}
             height={500}
-            className="z-10"
+            className="z-1"
           />
 
           {/* Text descriptions with increased contrast and shadow */}
-          {/* <div className="border border-white w-[335px] rounded-[20px] p-4 absolute -top-16 left-0">
-            <p className="text-[16px] leading-[24px] font-normal font-general-sans">
-              Supercharge your NUIIX digital human with the power of the latest
-              Large Language Models, enriched with your knowledge, for an
-              intelligent, context-aware experience that truly understands what
-              you say and how to respond.
-            </p>
-          </div> */}
-          {/* <div className="border border-white w-[335px] rounded-[20px] p-4 absolute top-[236px] left-0">
-            <p className="text-[16px] leading-[24px] font-normal font-general-sans">
-              Bring your digital human to life from a single photo in minutes,
-              or select from our exclusive library of ready-made avatars.
-            </p>
-          </div> */}
+          <div>
+            <div className="border border-white max-w-[335px] rounded-[20px] sm:p-4 p-3 absolute md:-top-16 sm:top-[0px] top-[3vw] left-0 z-[2] md:bg-transparent bg-black/30 backdrop-blur-sm">
+              <p className="sm:text-[16px] text-[15px] leading-[24px] font-normal font-general-sans capitalize">
+                Supercharge your NUIIX digital human with the power of the
+                latest Large Language Models, enriched with your knowledge, for
+                an intelligent, context-aware experience that truly understands
+                what you say and how to respond.
+              </p>
+            </div>
+            <div className="absolute top-[111.5px] lg:block hidden xl:left-[240px] left-[240px] z-1">
+              <img
+                src="/assets/line1.svg"
+                alt="line3"
+                className="xl:w-[28vw] w-[22vw]"
+              />
+            </div>
+          </div>
+          <div>
+            <div className="border border-white max-w-[335px] rounded-[20px] sm:p-4 p-3 absolute md:top-[224px] top-[370px] left-0 z-[2] md:bg-transparent bg-black/30 backdrop-blur-sm">
+              <p className="sm:text-[16px] text-[15px] leading-[24px] font-normal font-general-sans capitalize">
+                Bring your digital human to life from a single photo in minutes,
+                or select from our exclusive library of ready-made avatars.
+              </p>
+            </div>
+            <div className="absolute xl:top-[260px] top-[270px] lg:block hidden left-[334px] z-1">
+              <img
+                src="/assets/line3.svg"
+                alt="line3"
+                className="xl:w-[21vw] w-[20vw]"
+              />
+            </div>
+          </div>
 
-          {/* <div className="">
-            <div className="border border-white w-[335px] rounded-[20px] p-4 absolute top-[30px] right-0">
-              <p className="text-[16px] leading-[24px] font-normal font-general-sans">
+          <div className="">
+            <div className="border border-white max-w-[335px] rounded-[20px] sm:p-4 p-3 absolute md:top-[30px] sm:top-[210px] top-[220px] right-0 z-[2] md:bg-transparent bg-black/30 backdrop-blur-sm">
+              <p className="sm:text-[16px] text-[15px] leading-[24px] font-normal font-general-sans capitalize">
                 NUIIX Digital humans see you, sense emotions, and intuitively
                 respond to your every cue, creating interactions that feel truly
                 human
               </p>
             </div>
-            <div className="absolute top-[160px] right-[240px] z-40">
-              <svg
-                width="354"
-                height="56"
-                viewBox="0 0 354 56"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.631683 54.5305L300.165 54.5305L353.569 1.08216"
-                  stroke="white"
-                />
-              </svg>
+            <div className="absolute top-[158.5px] right-[240px] lg:block hidden z-1">
+              <img
+                src="/assets/line2.svg"
+                alt="line2"
+                className="xl:w-[26vw] w-[20vw]"
+              />
             </div>
-          </div> */}
-
-          {/* <div className="border border-white w-[335px] rounded-[20px] p-4 absolute top-[280px] right-0">
-            <p className="text-[16px] leading-[24px] font-normal font-general-sans">
-              100 + Voice Library and Eleven Lab Integration.
-            </p>
-          </div> */}
+          </div>
+          <div>
+            <div className="border border-white max-w-[335px] rounded-[20px] sm:p-4 p-3 absolute xl:top-[285px] md:top-[305px] top-[520px] right-0 z-[2] md:bg-transparent bg-black/30 backdrop-blur-sm">
+              <p className="sm:text-[16px] text-[15px] leading-[24px] font-normal font-general-sans capitalize">
+                100 + Voice Library and Eleven Lab Integration.
+              </p>
+            </div>
+            <div className="absolute xl:top-[297px] top-[325px] right-[334px] z-1 lg:block hidden">
+              <img
+                src="/assets/line4.svg"
+                alt="line4"
+                className="xl:w-[21vw] w-[18vw]"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
