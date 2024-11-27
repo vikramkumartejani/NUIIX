@@ -33,22 +33,18 @@ body {
   font-style: normal;
 }
 
-
 .blue-custom {
-  background: #DE1BDF;
+  background: #de1bdf;
   opacity: 0.34;
   filter: blur(132px);
   position: absolute;
-  top: 50%;  
-  left: 50%; 
-  transform: translate(-50%, -50%); 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 500px;
   height: 500px;
-  z-index: 0; 
+  z-index: 0;
 }
-
-
-
 
 .bg-custom {
   background-image: url("../public/assets/hero-bg.svg");
@@ -126,4 +122,22 @@ body {
 /* floating languages */
 .wJVBu {
   overflow: visible !important;
+}
+
+@keyframes highlightStep {
+  0%,
+  25% {
+    background: #4f5164; /* Default background */
+    box-shadow: none;
+  }
+  30%,
+  75% {
+    background: linear-gradient(45deg, #3a8fff, #3b59ff); /* Glowing gradient */
+    box-shadow: 0 0 10px rgba(58, 143, 255, 0.6); /* Glow effect */
+  }
+  80%,
+  100% {
+    background: #4f5164; /* Return to default */
+    box-shadow: none;
+  }
 }

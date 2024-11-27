@@ -12,7 +12,7 @@ export default function LanguagesSpeak() {
         </h1>
       </div>
 
-      <div className="text-white min-h-[90vh] flex flex-col items-center justify-center space-y-4 w-full relative">
+      <div className="text-white min-h-[80vh] flex flex-col items-center justify-center space-y-4 w-full relative">
         <FloatingText />
         <VerticalBars />
       </div>

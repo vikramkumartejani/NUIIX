@@ -46,7 +46,7 @@ const FloatingText: React.FC = () => {
           <Motion
             key={idx}
             velocity={17} // Bobbing speed
-            radius={20} // Height of the bobbing effect
+            radius={0} // Height of the bobbing effect
             backgroundColors={backgroundColors} // Transparent background colors
             initDeg={Math.random() * 360} // Random initial rotation angle
             direction={Math.random() > 0.5 ? "clockwise" : "counterclockwise"} // Random direction for bobbing

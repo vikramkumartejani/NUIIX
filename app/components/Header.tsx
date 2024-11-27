@@ -25,7 +25,7 @@ const Header = () => {
         <div className="text-white px-5 md:px-10 flex items-center justify-between h-full">
           {/* Logo */}
           <Image
-            src="/assets/logo.svg"
+            src="/assets/logo.png"
             alt="logo"
             width={120.8}
             height={69.8}

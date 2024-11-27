@@ -26,7 +26,7 @@ const VerticalBars: React.FC = () => {
 
     const interval = setInterval(() => {
       // Update bars with random heights every 200ms
-      setBars(Array.from({ length: barCount }, () => Math.random() * 400 + 20));
+      setBars(Array.from({ length: barCount }, () => Math.random() * 300));
     }, 700);
 
     return () => clearInterval(interval);

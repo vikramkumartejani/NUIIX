@@ -2,6 +2,23 @@
 import * as React from "react";
 import Image from "next/image";
 
+// Media query hook
+function useMediaQuery(query: string) {
+  const [matches, setMatches] = React.useState(false);
+
+  React.useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    media.addEventListener("change", listener);
+    return () => media.removeEventListener("change", listener);
+  }, [matches, query]);
+
+  return matches;
+}
+
 type Step = {
   number: string;
   title: string;
@@ -44,6 +61,19 @@ const steps: Step[] = [
 ];
 
 export default function Steps(): JSX.Element {
+  const [activeIndex, setActiveIndex] = React.useState(0);
+  const isLargeScreen = useMediaQuery("(min-width: 768px)");
+
+  React.useEffect(() => {
+    if (!isLargeScreen) return; // Disable animation on small screens
+
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % steps.length);
+    }, 1000); // Change step every 2 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [isLargeScreen]);
+
   return (
     <section className="min-h-screen text-white px-4 py-[50px] md:py-[70px] relative">
       <img
@@ -72,13 +102,25 @@ export default function Steps(): JSX.Element {
                     className="w-auto h-[68px]"
                   />
                   <div
-                    className={`${
-                      index === 3
-                        ? "w-[26.64px] h-[26.64px] min-w-[26.64px] min-h-[26.64px] bg-custom-blue-gradient shadow-blue-glow"
-                        : "w-[26.64px] h-[26.64px] min-w-[26.64px] min-h-[26.64px] bg-[#4F5164]"
-                    } rounded-full mt-[38px] mb-[42px] md:block hidden`}
+                    className={`w-[26.64px] h-[26.64px] min-w-[26.64px] min-h-[26.64px] rounded-full mt-[38px] mb-[38px] md:block hidden transition-all duration-500`}
+                    style={{
+                      background:
+                        isLargeScreen && activeIndex === index
+                          ? "linear-gradient(45deg, #3a8fff, #3b59ff)"
+                          : "#4F5164",
+                      boxShadow:
+                        isLargeScreen && activeIndex === index
+                          ? "0 0 10px rgba(58, 143, 255, 0.6)"
+                          : "none",
+                    }}
                   ></div>
-                  <h3 className="text-[22px] md:text-[26px] text-[#FFFFFFCC] font-[400] font-biliner-meclan md:mb-[24px] mb-[5px] md:mt-0 sm:mt-5 mt-4">
+                  <h3
+                    className={`text-[22px] md:text-[26px] ${
+                      isLargeScreen && activeIndex === index
+                        ? "text-[#3A8FFF]"
+                        : "text-[#FFFFFFCC]"
+                    } font-[400] font-biliner-meclan md:mb-[24px] mb-[5px] md:mt-0 sm:mt-5 mt-4 transition-colors duration-500`}
+                  >
                     Step {step.number}
                   </h3>
                   <h4 className="text-[30px] md:text-[33px] font-[700] md:mb-[18px] mb-[14px] helvetica-bold md:leading-[40px] leading-[35px]">

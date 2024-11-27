@@ -15,14 +15,15 @@ type SocialLink = {
 
 export default function Footer(): JSX.Element {
   const companyLinks = [
-    "About",
-    "Ethics",
-    "Careers",
-    "Team",
-    "News",
-    "Contact Support",
-    "Contact",
-    "Sales",
+    { text: "About", href: "/about" },
+    { text: "Team", href: "/team" },
+    { text: "News", href: "/news" },
+    { text: "Contact Support", href: "/contact-support" },
+    { text: "Contact", href: "/contact" },
+    { text: "Sales", href: "/sales" },
+    { text: "Terms of Service", href: "/terms-of-service" },
+    { text: "Privacy Policy", href: "/privacy-policy" },
+    { text: "Cookies Policy", href: "/cookies-policy" },
   ];
 
   const solutionLinks = ["Customer Service", "Marketing", "Training"];
@@ -47,13 +48,13 @@ export default function Footer(): JSX.Element {
                 Company
               </h2>
               <ul className="md:space-y-4 space-y-2">
-                {companyLinks.map((item) => (
-                  <li key={item}>
+                {companyLinks.map((link) => (
+                  <li key={link.text}>
                     <Link
-                      href="#"
+                      href={link.href}
                       className="hover:text-gray-900 md:text-[18px] font-[400] text-[#222222]"
                     >
-                      {item}
+                      {link.text}
                     </Link>
                   </li>
                 ))}
@@ -91,6 +92,16 @@ export default function Footer(): JSX.Element {
               <h2 className="md:mb-[34px] mb-[20px] md:text-[24px] text-[20px] font-[700] text-[#222222] helvetica-bold">
                 Ethics
               </h2>
+              <ul className="md:space-y-4 space-y-2">
+                <li>
+                  <Link
+                    href="#"
+                    className="hover:text-gray-900 md:text-[18px] font-[400] text-[#222222] w-max flex"
+                  >
+                    Our Pledge
+                  </Link>
+                </li>
+              </ul>
             </div>
 
             {/* Pricing Section */}
@@ -157,8 +168,10 @@ export default function Footer(): JSX.Element {
         {/* Copyright */}
         <div className="text-center text-sm text-gray-600 border-t border-[#000] md:py-[40px] py-[30px] mt-[47px]">
           <p>
-            © All Rights Reserved 2024 NUIIX AI | NUIIX Privacy Policy | Terms
-            Of Use
+            © All Rights Reserved 2024 NUIIX AI | NUIIX{" "}
+            <Link href="privacy-policy">Privacy Policy</Link> |{" "}
+            <Link href="terms-of-service">Terms Of Use</Link> |{" "}
+            <Link href="cookies-policy">Cookies Policy</Link>
           </p>
         </div>
       </div>
