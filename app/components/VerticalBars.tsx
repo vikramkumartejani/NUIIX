@@ -37,7 +37,7 @@ const VerticalBars: React.FC = () => {
       {bars.map((height, idx) => (
         <div
           key={idx}
-          className="bg-[#58ADFF] rounded-md w-[4px] md:w-[5px]"
+          className="bg-white rounded-md w-[4px] md:w-[5px]"
           style={{
             height: `${height}px`, // Dynamic height
             transition: "height 0.7s ease", // Smooth height transition

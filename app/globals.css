@@ -141,3 +141,49 @@ body {
     box-shadow: none;
   }
 }
+
+/* Animated border */
+.card-border {
+  position: relative;
+  width: 100%;
+
+  isolation: isolate;
+  background-color: #3a8fff;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-border::before,
+.card-border::after {
+  content: "";
+  position: absolute;
+}
+.card-border::before {
+  content: ""; /* Create content for the pseudo-element */
+  position: absolute;
+  top: 4%; /* Vertically center the line */
+  left: 50%; /* Center the rotation point */
+  transform-origin: left center; /* Set rotation origin to the left side of the pseudo-element */
+  width: 100%; /* Full width of the parent container */
+  height: 51px; /* Line thickness */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  z-index: -1; /* Ensure it's behind the card-border content */
+  animation: btnBorder 8s linear infinite; /* Animate the rotation */
+}
+
+.card-border::after {
+  background-color: #3a8fff;
+  /* inset: 2px; */
+}
+
+/* stars orbit animation */
+@keyframes orbit {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
