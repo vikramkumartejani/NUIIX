@@ -15,7 +15,7 @@ type SocialLink = {
 
 export default function Footer(): JSX.Element {
   const companyLinks = [
-    { text: "About", href: "/about" },
+    { text: "About", href: "/about-us" },
     { text: "Team", href: "/team" },
     { text: "News", href: "/news" },
     { text: "Contact Support", href: "/contact-support" },
@@ -166,13 +166,14 @@ export default function Footer(): JSX.Element {
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-sm text-gray-600 border-t border-[#000] md:py-[40px] py-[30px] mt-[47px]">
+        <div className="text-center text-sm text-gray-600 border-t border-[#000] md:py-[40px] py-[30px] mt-[47px] flex items-center justify-between flex-col md:flex-row gap-5">
           <p>
             © All Rights Reserved 2024 NUIIX AI | NUIIX{" "}
             <Link href="privacy-policy">Privacy Policy</Link> |{" "}
             <Link href="terms-of-service">Terms Of Use</Link> |{" "}
             <Link href="cookies-policy">Cookies Policy</Link>
           </p>
+          <h2 className="text-base sm:text-lg">A DynamiX Company</h2>
         </div>
       </div>
     </footer>

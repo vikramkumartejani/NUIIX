@@ -73,9 +73,9 @@ const Header = () => {
               </div>
             </button>
 
-            <button className="text-[18px] leading-[18px] font-normal font-general-sans transition duration-300 hover:text-[#3A8FFF]">
+            <Link href='/login' className="text-[18px] leading-[18px] font-normal font-general-sans transition duration-300 hover:text-[#3A8FFF]">
               Log In
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle Button */}

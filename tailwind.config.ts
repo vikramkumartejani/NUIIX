@@ -22,6 +22,7 @@ const config: Config = {
         "custom-blue-gradient":
           "linear-gradient(180deg, #3A8FFF 0%, #1C71E1 100%)",
       },
+      
     },
   },
   plugins: [],
