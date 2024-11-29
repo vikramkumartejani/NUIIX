@@ -38,7 +38,7 @@ const AccordionItem: React.FC<{ item: PledgeItem; isOpen: boolean; onClick: () =
   return (
     <div className="border-b border-white/10 last:border-b-0">
       <button
-        className="w-full text-left py-4 flex justify-between items-center text-lg   rounded"
+        className="w-full text-left py-3 md:py-4 flex justify-between items-center gap-4 text-lg rounded"
         onClick={onClick}
         aria-expanded={isOpen}
       >

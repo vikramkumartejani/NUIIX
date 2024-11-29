@@ -45,7 +45,9 @@ const AboutUs = () => {
           We Believe In Good Ideas Flexibility & Precision
         </h1>
         <div className="py-5 sm:py-10">
-          <h2 className="text-lg sm:text-3xl font-semibold mb-3 sm:mb-6">Our Mission</h2>
+          <h2 className="text-lg sm:text-3xl font-semibold mb-3 sm:mb-6">
+            Our Mission
+          </h2>
           <p className="text-sm sm:text-xl font-medium">
             Bringing Human Interaction to the Digital World: We are committed to
             revolutionizing engagement through hyper-realistic, AI-powered
@@ -58,7 +60,9 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="pb-5 sm:pb-10">
-          <h2 className="text-lg sm:text-3xl font-semibold mb-3 sm:mb-6">Our Vision</h2>
+          <h2 className="text-lg sm:text-3xl font-semibold mb-3 sm:mb-6">
+            Our Vision
+          </h2>
           <p className="text-sm sm:text-xl font-medium">
             Empowering businesses globally to innovate, connect, and thrive by
             transforming customer experiences into meaningful, lifelike digital
@@ -73,16 +77,24 @@ const AboutUs = () => {
         {/* Two Boxes */}
         <div className="max-w-80 sm:max-w-3xl w-full mx-auto grid grid-cols-1 sm:grid-cols-2 gap-5 text-center my-5">
           <div className="shadow-lg rounded-xl px-5 py-5 sm:py-8">
-            <h2 className="text-red-500 text-2xl sm:text-3xl font-black">2024</h2>
-            <h1 className="text-2xl sm:text-3xl my-3 sm:my-5 font-medium">Founded</h1>
+            <h2 className="text-red-500 text-2xl sm:text-3xl font-black">
+              2024
+            </h2>
+            <h1 className="text-2xl sm:text-3xl my-3 sm:my-5 font-medium">
+              Founded
+            </h1>
             <p className="text-base sm:text-xl sm:leading-[30px] text-gray-600">
               We started with a mission to help enterprises be closer to their
               customers and interact naturally.
             </p>
           </div>
           <div className="shadow-lg rounded-xl px-5 py-5 sm:py-8">
-            <h2 className="text-red-500 text-2xl sm:text-3xl font-black">20+</h2>
-            <h1 className="text-2xl sm:text-3xl my-3 sm:my-5 font-medium">Team Members</h1>
+            <h2 className="text-red-500 text-2xl sm:text-3xl font-black">
+              20+
+            </h2>
+            <h1 className="text-2xl sm:text-3xl my-3 sm:my-5 font-medium">
+              Team Members
+            </h1>
             <p className="text-base sm:text-xl sm:leading-[30px] text-gray-600">
               Our team has the best AI minds obsessed with enabling businesses
               to accomplish great things.
@@ -113,7 +125,9 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="pb-5 sm:pb-10">
-          <h2 className="text-xl sm:text-3xl font-semibold mb-4 sm:mb-6">Our Journey Forward</h2>
+          <h2 className="text-xl sm:text-3xl font-semibold mb-4 sm:mb-6">
+            Our Journey Forward
+          </h2>
           <p className="text-sm sm:text-xl font-medium">
             At NUIIX we are not just creating digital avatars; we are shaping
             the future of interaction. From customer service to education,
@@ -174,7 +188,9 @@ const AboutUs = () => {
                     <value.icon className="w-5 h-5" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-lg sm:text-2xl font-semibold">{value.title}</h3>
+                    <h3 className="text-lg sm:text-2xl font-semibold">
+                      {value.title}
+                    </h3>
                     <p className="text-gray-600 leading-relaxed text-sm sm:text-lg">
                       {value.description}
                     </p>
