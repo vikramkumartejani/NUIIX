@@ -60,7 +60,9 @@ export default function EnterpriseInquiryForm() {
           </button>
 
           <div className="text-center">
-            <p className="text-gray-500 mb-4 text-sm md:text-lg">Or Call Me Instead</p>
+            <p className="text-gray-500 mb-4 text-sm md:text-lg">
+              Or Call Me Instead
+            </p>
 
             <div className="relative mb-4">
               <select className="absolute left-0 top-1/2 pl-3 -translate-y-1/2 bg-transparent text-gray-700 outline-none px-2 py-2 appearance-none">
@@ -69,7 +71,7 @@ export default function EnterpriseInquiryForm() {
                 <option value="+91">+91</option>
               </select>
               <input
-                type="tel"
+                type="number"
                 value={phoneNumber}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
                   setPhoneNumber(e.target.value)
@@ -100,7 +102,9 @@ export default function EnterpriseInquiryForm() {
               />
               <div className="flex items-center justify-center space-x-2 text-gray-700">
                 <FiPhone className="w-4 h-4 md:w-5 md:h-5" />
-                <span className="font-medium text-sm md:text-lg">SLIDE TO CALL</span>
+                <span className="font-medium text-sm md:text-lg">
+                  SLIDE TO CALL
+                </span>
               </div>
             </div>
           </div>

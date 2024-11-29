@@ -25,7 +25,7 @@ const Header = () => {
         <div className="text-white px-5 md:px-10 flex items-center justify-between h-full">
           {/* Logo */}
           <Image
-            src="/assets/logo.png"
+            src="/assets/white-logo.png"
             alt="logo"
             width={120.8}
             height={69.8}
@@ -73,7 +73,10 @@ const Header = () => {
               </div>
             </button>
 
-            <Link href='/login' className="text-[18px] leading-[18px] font-normal font-general-sans transition duration-300 hover:text-[#3A8FFF]">
+            <Link
+              href="/login"
+              className="text-[18px] leading-[18px] font-normal font-general-sans transition duration-300 hover:text-[#3A8FFF]"
+            >
               Log In
             </Link>
           </div>
