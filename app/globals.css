@@ -144,11 +144,9 @@ body {
 
 /* Animated border */
 .card-border {
-  position: relative;
   width: 100%;
-
   isolation: isolate;
-  background-color: #3a8fff;
+  background-color: #0f0616;
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center;
@@ -174,7 +172,7 @@ body {
 }
 
 .card-border::after {
-  background-color: #3a8fff;
+  background-color: #0f0616;
   /* inset: 2px; */
 }
 
