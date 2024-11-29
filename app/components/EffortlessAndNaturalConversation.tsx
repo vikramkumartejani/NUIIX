@@ -41,12 +41,21 @@ const EffortlessAndNaturalConversation = () => {
                 </p>
               </div>
             </div>
-            <div className="absolute top-[111.5px] lg:block hidden xl:left-[240px] left-[240px] z-1">
+            <div className="absolute xl:top-[111.5px] top-[130px] lg:block hidden xl:left-[200px] left-[220px] z-1">
               <img
                 src="/assets/line1.svg"
-                alt="line3"
+                alt="line1"
                 className="xl:w-[28vw] w-[22vw]"
               />
+              <div className="w-[17px] overflow-visible  bg-transparent">
+                <img
+                  src="/assets/dot.svg"
+                  alt="dot"
+                  width={17}
+                  height={17}
+                  className="w-[17px] h-full object-cover overflow-visible animate-pulse-scale absolute xl:top-[2.24vw] right-[-10px] top-[1.77vw] bg-transparent"
+                />
+              </div>
             </div>
           </div>
           <div>
@@ -59,17 +68,26 @@ const EffortlessAndNaturalConversation = () => {
                 </p>
               </div>
             </div>
-            <div className="absolute xl:top-[260px] top-[270px] lg:block hidden left-[334px] z-1">
+            <div className="absolute top-[290px] lg:block hidden xl:left-[280px] left-[240px] z-1">
               <img
                 src="/assets/line3.svg"
                 alt="line3"
                 className="xl:w-[21vw] w-[20vw]"
               />
+              <div className="w-[17px] overflow-visible  bg-transparent">
+                <img
+                  src="/assets/dot.svg"
+                  alt="dot"
+                  width={17}
+                  height={17}
+                  className="w-[17px] xl:h-[60px] h-[50px] object-cover overflow-visible animate-pulse-scale absolute xl:top-[-25px] top-[-21.3px] right-[-10px] bg-transparent"
+                />
+              </div>
             </div>
           </div>
 
           <div>
-            <div className="card-border max-w-[335px] p-[1px] absolute md:top-[30px] sm:top-[210px] top-[220px] right-0 z-[2] rounded-[20px]">
+            <div className="card-border max-w-[335px] p-[1px] absolute xl:top-[30px] lg:top-[50px] md:top-[30px] sm:top-[210px] top-[220px] right-0 z-[2] rounded-[20px]">
               <div className="border border-white/50 max-w-[335px] rounded-[20px] sm:p-4 p-3 relative z-[4] bg-[#0f0616] backdrop-blur-sm">
                 <p className="sm:text-[16px] text-[15px] leading-[24px] font-normal font-general-sans capitalize">
                   NUIIX Digital humans see you, sense emotions, and intuitively
@@ -78,28 +96,46 @@ const EffortlessAndNaturalConversation = () => {
                 </p>
               </div>
             </div>
-            <div className="absolute top-[158.5px] right-[240px] lg:block hidden z-1">
+            <div className="absolute xl:top-[160px] top-[180px] xl:right-[210px] right-[250px] lg:block hidden z-1">
               <img
                 src="/assets/line2.svg"
                 alt="line2"
                 className="xl:w-[26vw] w-[20vw]"
               />
+              <div className="w-[17px] overflow-visible  bg-transparent">
+                <img
+                  src="/assets/dot.svg"
+                  alt="dot"
+                  width={17}
+                  height={17}
+                  className="w-[17px] h-full object-cover overflow-visible animate-pulse-scale absolute xl:top-[2.24vw] left-[-10px] top-[1.688888vw] bg-transparent"
+                />
+              </div>
             </div>
           </div>
           <div>
-            <div className="card-border max-w-[335px] p-[1px] absolute xl:top-[330px] md:top-[332px] top-[520px] xl:right-[40px] right-0 z-[1] rounded-[20px]">
+            <div className="card-border max-w-[335px] p-[1px] absolute xl:top-[330px] md:top-[332px] top-[520px] xl:right-[40px] right-0 z-[2] rounded-[20px]">
               <div className="border border-white/50 max-w-[335px] rounded-[20px] sm:p-4 p-3 relative z-[4] bg-[#0f0616] backdrop-blur-sm">
                 <p className="sm:text-[16px] text-[15px] leading-[24px] font-normal font-general-sans capitalize">
                   100 + Voice Library and Eleven Lab Integration.
                 </p>
               </div>
             </div>
-            <div className="absolute xl:top-[341px] top-[350px] xl:right-[374px] right-[334px] z-[3] lg:block hidden">
+            <div className="absolute top-[370px] xl:right-[300px] right-[300px] z-[1] lg:block hidden">
               <img
                 src="/assets/line4.svg"
                 alt="line4"
                 className="xl:w-[21vw] w-[18vw]"
               />
+              <div className="w-[17px] overflow-visible  bg-transparent">
+                <img
+                  src="/assets/dot.svg"
+                  alt="dot"
+                  width={17}
+                  height={17}
+                  className="w-[17px] xl:h-[60px] h-[50px] object-cover overflow-visible animate-pulse-scale absolute xl:top-[-25.5px] top-[-21.6px] left-[-10px] bg-transparent"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -1,31 +1,3 @@
-<svg width="388" height="93" viewBox="0 0 388 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.3" filter="url(#filter0_d_2042_4)">
-<circle cx="8.7595" cy="8.7595" r="8.7595" transform="matrix(-1 0 0 1 43.3477 45.771)" fill="white"/>
-</g>
-<g filter="url(#filter1_d_2042_4)">
-<circle cx="5.74084" cy="5.74084" r="5.74084" transform="matrix(-1 0 0 1 40.3289 48.7896)" fill="white"/>
-</g>
-<path d="M34.0001 54.4483L333.534 54.4483L386.938 1.00001" stroke="white"/>
-<defs>
-<filter id="filter0_d_2042_4" x="0.828613" y="24.771" width="67.519" height="67.519" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="12.5"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2042_4"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2042_4" result="shape"/>
-</filter>
-<filter id="filter1_d_2042_4" x="3.84717" y="27.7896" width="61.4817" height="61.4817" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="12.5"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2042_4"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2042_4" result="shape"/>
-</filter>
-</defs>
+<svg width="354" height="55" viewBox="0 0 354 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.15527e-05 54.4483L299.534 54.4483L352.938 1.00001" stroke="white"/>
 </svg>

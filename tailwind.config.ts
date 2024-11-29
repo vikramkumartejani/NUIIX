@@ -22,7 +22,21 @@ const config: Config = {
         "custom-blue-gradient":
           "linear-gradient(180deg, #3A8FFF 0%, #1C71E1 100%)",
       },
-      
+      keyframes: {
+        pulseScale: {
+          "0%, 100%": {
+            transform: "scale(1) translateY(0)",
+            transformOrigin: "center",
+          },
+          "50%": {
+            transform: "scale(1.3) translateY(0.9px)", // Slight downward movement
+            transformOrigin: "center",
+          },
+        },
+      },
+      animation: {
+        "pulse-scale": "pulseScale 1.5s ease-in-out infinite",
+      },
     },
   },
   plugins: [],
